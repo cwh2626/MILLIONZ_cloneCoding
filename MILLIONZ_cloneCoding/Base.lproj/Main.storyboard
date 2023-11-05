@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yZi-b9-p0L">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,124 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MILLIONZ_cloneCoding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="htJ-3I-Gxh">
+                                <rect key="frame" x="95.5" y="172" width="184" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="DyP-aH-SXJ"/>
+                                    <constraint firstAttribute="height" constant="39" id="GF5-d4-3v7"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="85y-Dg-bkt">
+                                <rect key="frame" x="51.5" y="464" width="272" height="56"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjy-Y2-uoz">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="btn_apple">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="asP-So-hoY" kind="show" id="WMn-pp-l92"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5g-QS-OLK">
+                                        <rect key="frame" x="72" y="0.0" width="56" height="56"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="btn_kakao"/>
+                                        <connections>
+                                            <segue destination="asP-So-hoY" kind="show" id="vZe-U4-LQn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fir-dm-xu1">
+                                        <rect key="frame" x="144" y="0.0" width="56" height="56"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="btn_naver"/>
+                                        <connections>
+                                            <segue destination="asP-So-hoY" kind="show" id="upF-n7-h74"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="test" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xz-NX-odk" userLabel="Google Bottom">
+                                        <rect key="frame" x="216" y="0.0" width="56" height="56"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="btn_google"/>
+                                        <connections>
+                                            <segue destination="asP-So-hoY" kind="show" id="d8d-MF-fD0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="htJ-3I-Gxh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JEz-hR-Muh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="85y-Dg-bkt" secondAttribute="bottom" constant="147" id="OnG-Vy-dUb"/>
+                            <constraint firstItem="85y-Dg-bkt" firstAttribute="top" secondItem="htJ-3I-Gxh" secondAttribute="bottom" priority="750" constant="253" id="iKb-RY-6N6"/>
+                            <constraint firstItem="85y-Dg-bkt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pj4-w3-XRi"/>
+                            <constraint firstItem="htJ-3I-Gxh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q1c-mK-ZIh"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="kLM-CY-0by"/>
+                    <connections>
+                        <outlet property="appleButton" destination="fjy-Y2-uoz" id="OoU-qL-WGi"/>
+                        <outlet property="buttonStackView" destination="85y-Dg-bkt" id="KyM-Q3-Fec"/>
+                        <outlet property="googleButton" destination="7xz-NX-odk" id="JfK-Zm-dQs"/>
+                        <outlet property="kakaoButton" destination="X5g-QS-OLK" id="lSi-b7-jVn"/>
+                        <outlet property="naverButton" destination="fir-dm-xu1" id="RTg-nR-BKu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="706.39999999999998" y="-28.335832083958024"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="D0s-p8-7J8">
+            <objects>
+                <viewController id="asP-So-hoY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pay-OJ-jYR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OrQ-n9-aRf"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="goe-pY-xvm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wc0-wQ-6NJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1490" y="-28"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ddv-Ng-lch">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yZi-b9-p0L" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dDv-1u-OE1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6Oc-5m-8oj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXI-vq-ViO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-216.03053435114504" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WMn-pp-l92"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="btn_apple" width="56" height="56"/>
+        <image name="btn_google" width="56" height="56"/>
+        <image name="btn_kakao" width="56" height="56"/>
+        <image name="btn_naver" width="56" height="56"/>
+        <image name="logo" width="184" height="39"/>
+    </resources>
 </document>
