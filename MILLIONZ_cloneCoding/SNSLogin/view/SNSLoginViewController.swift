@@ -37,7 +37,5 @@ class ViewController: UIViewController {
             $0.centerX.equalTo(kakaoButton.snp.centerX)
         }
     }
-
-
 }
 

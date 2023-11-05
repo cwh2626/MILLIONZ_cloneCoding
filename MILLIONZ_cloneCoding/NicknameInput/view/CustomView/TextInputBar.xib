@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SpoqaHanSansNeo-Bold.otf">
+            <string>SpoqaHanSansNeo-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextInputBar" customModule="MILLIONZ_cloneCoding" customModuleProvider="target">
+            <connections>
+                <outlet property="inputTextField" destination="YbA-CF-5wh" id="Ujd-4Z-ELc"/>
+                <outlet property="underlineView" destination="3o2-Gb-i23" id="A6I-EJ-oj8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="32"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="닉네임을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YbA-CF-5wh">
+                    <rect key="frame" x="0.0" y="0.0" width="335" height="22"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" red="0.39215686274509803" green="0.15686274509803921" blue="0.83137254901960778" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3o2-Gb-i23">
+                    <rect key="frame" x="0.0" y="30" width="335" height="2"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="NdH-dz-RXN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="3o2-Gb-i23" secondAttribute="bottom" id="9aY-Or-Wt7"/>
+                <constraint firstItem="3o2-Gb-i23" firstAttribute="top" secondItem="YbA-CF-5wh" secondAttribute="bottom" constant="8" id="BTb-Gf-hZD"/>
+                <constraint firstItem="3o2-Gb-i23" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ior-EP-TOk"/>
+                <constraint firstItem="YbA-CF-5wh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NsQ-6s-Sle"/>
+                <constraint firstItem="YbA-CF-5wh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mPW-1c-kBD"/>
+                <constraint firstAttribute="trailing" secondItem="YbA-CF-5wh" secondAttribute="trailing" id="mR5-MI-JeB"/>
+                <constraint firstAttribute="trailing" secondItem="3o2-Gb-i23" secondAttribute="trailing" id="tDj-jh-T7j"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="153.43511450381678" y="-300.7042253521127"/>
+        </view>
+    </objects>
+</document>
