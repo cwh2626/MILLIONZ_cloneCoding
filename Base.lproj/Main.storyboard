@@ -130,6 +130,11 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="qsA-OD-bfD"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="characterLimit">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <gestureRecognizers/>
@@ -159,7 +164,14 @@
                             <constraint firstItem="4fA-Vk-dz5" firstAttribute="leading" secondItem="OrQ-n9-aRf" secondAttribute="leading" id="lK3-fm-Fiu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="goe-pY-xvm"/>
+                    <navigationItem key="navigationItem" id="goe-pY-xvm">
+                        <barButtonItem key="backBarButtonItem" title=" " id="4Td-Ei-Md4"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nextButtonContainer" destination="lp5-X6-pYA" id="mol-nS-aPb"/>
+                        <outlet property="nicknameInputBar" destination="QWG-mm-lEe" id="Jqd-zF-Urj"/>
+                        <segue destination="CRw-9O-Nxg" kind="show" identifier="toCharacterSelectionSegue" id="Agu-Of-bjI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wc0-wQ-6NJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="EQz-br-CJM">
@@ -169,6 +181,22 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1488.8" y="-28.335832083958024"/>
+        </scene>
+        <!--Character Selection View Controller-->
+        <scene sceneID="6Cd-8w-Aff">
+            <objects>
+                <viewController id="CRw-9O-Nxg" customClass="CharacterSelectionViewController" customModule="MILLIONZ_cloneCoding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bha-Ds-t7T">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TE2-VH-AVj"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sGC-gX-7aT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JwZ-gd-qc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2316" y="-29"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ddv-Ng-lch">
@@ -190,7 +218,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d8d-MF-fD0"/>
+        <segue reference="upF-n7-h74"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow" width="24" height="24"/>

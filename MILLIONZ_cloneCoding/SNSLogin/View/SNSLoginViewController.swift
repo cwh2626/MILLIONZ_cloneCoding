@@ -7,6 +7,8 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+
 
 class ViewController: UIViewController {
     
@@ -16,23 +18,37 @@ class ViewController: UIViewController {
     @IBOutlet weak var naverButton: UIButton!
     @IBOutlet weak var kakaoButton: UIButton!
     
-    private var previousSNSTypeAlertView: UIView!
-    
+    private var previousSNSTypeAlertView: PreviousSNSTypeAlertView!
+    private var viewModel: SharedRegistrationViewModel!
+    private let disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.viewModel = SharedRegistrationViewModel()
+        let nib = UINib(nibName: PreviousSNSTypeAlertView.id, bundle: nil)
+        previousSNSTypeAlertView = nib.instantiate(withOwner: self, options: nil).first as? PreviousSNSTypeAlertView
         
-        let nib = UINib(nibName: "PreviousSNSTypeAlertView", bundle: nil)
-        previousSNSTypeAlertView = nib.instantiate(withOwner: self, options: nil).first as? UIView
         self.view.addSubview(previousSNSTypeAlertView)
 
         
         setupConstraints()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? NicknameInputViewController {
+            destinationVC.viewModel = self.viewModel
+        }
+    }
+    
+    private func bindViewModel() {
+        
+    }
+
+    
     private func setupConstraints() {
         previousSNSTypeAlertView.snp.makeConstraints {
-            $0.width.equalTo(104)
-            $0.height.equalTo(65)
+//            $0.width.equalTo(104)
+//            $0.height.equalTo(65)
             $0.top.equalTo(buttonStackView.snp.bottom).offset(8)
             $0.centerX.equalTo(kakaoButton.snp.centerX)
         }

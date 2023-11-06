@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3523A70D2AF7C3CA0019FC7C /* UITextField+ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3523A70C2AF7C3CA0019FC7C /* UITextField+ClearButton.swift */; };
+		3523A7102AF7CEB80019FC7C /* NicknameInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3523A70F2AF7CEB80019FC7C /* NicknameInputViewModel.swift */; };
+		3523A7132AF7CF010019FC7C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3523A7122AF7CF010019FC7C /* RxCocoa */; };
+		3523A7152AF7CF010019FC7C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3523A7142AF7CF010019FC7C /* RxSwift */; };
 		352733FE2AF7845900ABEB05 /* UIView+XibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352733FD2AF7845900ABEB05 /* UIView+XibLoading.swift */; };
 		352734002AF7938B00ABEB05 /* TextInputBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 352733FF2AF7938B00ABEB05 /* TextInputBar.xib */; };
 		352734042AF7954300ABEB05 /* TextInputBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352734032AF7954300ABEB05 /* TextInputBar.swift */; };
@@ -17,6 +20,10 @@
 		358CAEC22AF75DA000C070FB /* NicknameInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358CAEC12AF75DA000C070FB /* NicknameInputViewController.swift */; };
 		358CAEC82AF7718B00C070FB /* ActionBottomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 358CAEC72AF7718B00C070FB /* ActionBottomButton.xib */; };
 		358CAECA2AF774B600C070FB /* ActionBottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358CAEC92AF774B600C070FB /* ActionBottomButton.swift */; };
+		358CB0E12AF88AC00087832B /* PreviousSNSTypeAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358CB0E02AF88AC00087832B /* PreviousSNSTypeAlertView.swift */; };
+		358CB0E42AF8ACB00087832B /* SharedRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358CB0E32AF8ACB00087832B /* SharedRegistrationViewModel.swift */; };
+		358CB0E82AF8C9DB0087832B /* CharacterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358CB0E72AF8C9DB0087832B /* CharacterSelectionViewController.swift */; };
+		358CB0EB2AF8CE9F0087832B /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358CB0EA2AF8CE9F0087832B /* SegueIdentifier.swift */; };
 		359371B12AF4EE4000124E5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359371B02AF4EE4000124E5D /* AppDelegate.swift */; };
 		359371B32AF4EE4000124E5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359371B22AF4EE4000124E5D /* SceneDelegate.swift */; };
 		359371B52AF4EE4000124E5D /* SNSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359371B42AF4EE4000124E5D /* SNSLoginViewController.swift */; };
@@ -50,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		3523A70C2AF7C3CA0019FC7C /* UITextField+ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+ClearButton.swift"; sourceTree = "<group>"; };
+		3523A70F2AF7CEB80019FC7C /* NicknameInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameInputViewModel.swift; sourceTree = "<group>"; };
 		352733FD2AF7845900ABEB05 /* UIView+XibLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+XibLoading.swift"; sourceTree = "<group>"; };
 		352733FF2AF7938B00ABEB05 /* TextInputBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputBar.xib; sourceTree = "<group>"; };
 		352734032AF7954300ABEB05 /* TextInputBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputBar.swift; sourceTree = "<group>"; };
@@ -58,6 +66,10 @@
 		358CAEC12AF75DA000C070FB /* NicknameInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameInputViewController.swift; sourceTree = "<group>"; };
 		358CAEC72AF7718B00C070FB /* ActionBottomButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionBottomButton.xib; sourceTree = "<group>"; };
 		358CAEC92AF774B600C070FB /* ActionBottomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBottomButton.swift; sourceTree = "<group>"; };
+		358CB0E02AF88AC00087832B /* PreviousSNSTypeAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousSNSTypeAlertView.swift; sourceTree = "<group>"; };
+		358CB0E32AF8ACB00087832B /* SharedRegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedRegistrationViewModel.swift; sourceTree = "<group>"; };
+		358CB0E72AF8C9DB0087832B /* CharacterSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectionViewController.swift; sourceTree = "<group>"; };
+		358CB0EA2AF8CE9F0087832B /* SegueIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
 		359371AD2AF4EE4000124E5D /* MILLIONZ_cloneCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MILLIONZ_cloneCoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		359371B02AF4EE4000124E5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		359371B22AF4EE4000124E5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3523A7152AF7CF010019FC7C /* RxSwift in Frameworks */,
+				3523A7132AF7CF010019FC7C /* RxCocoa in Frameworks */,
 				358CAEBE2AF5572300C070FB /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3523A70E2AF7CE1C0019FC7C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3523A70F2AF7CEB80019FC7C /* NicknameInputViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		352733FC2AF783B800ABEB05 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				358CAEBA2AF5557E00C070FB /* PreviousSNSTypeAlertView.xib */,
+				358CB0E02AF88AC00087832B /* PreviousSNSTypeAlertView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -132,23 +155,26 @@
 		358CAEBF2AF75D7E00C070FB /* NicknameInput */ = {
 			isa = PBXGroup;
 			children = (
-				358CAEC02AF75D8800C070FB /* view */,
+				3523A70E2AF7CE1C0019FC7C /* ViewModel */,
+				358CAEC02AF75D8800C070FB /* View */,
 			);
 			path = NicknameInput;
 			sourceTree = "<group>";
 		};
-		358CAEC02AF75D8800C070FB /* view */ = {
+		358CAEC02AF75D8800C070FB /* View */ = {
 			isa = PBXGroup;
 			children = (
 				352734012AF7952100ABEB05 /* CustomView */,
 				358CAEC12AF75DA000C070FB /* NicknameInputViewController.swift */,
 			);
-			path = view;
+			path = View;
 			sourceTree = "<group>";
 		};
 		358CAEC52AF7710E00C070FB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				358CB0E92AF8CE300087832B /* Util */,
+				358CB0E22AF8AC6B0087832B /* ViewModel */,
 				352733FC2AF783B800ABEB05 /* Extensions */,
 				358CAEC62AF7711D00C070FB /* CustomView */,
 			);
@@ -162,6 +188,38 @@
 				358CAEC92AF774B600C070FB /* ActionBottomButton.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		358CB0E22AF8AC6B0087832B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				358CB0E32AF8ACB00087832B /* SharedRegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		358CB0E52AF8C9700087832B /* CharacterSelection */ = {
+			isa = PBXGroup;
+			children = (
+				358CB0E62AF8C9AF0087832B /* View */,
+			);
+			path = CharacterSelection;
+			sourceTree = "<group>";
+		};
+		358CB0E62AF8C9AF0087832B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				358CB0E72AF8C9DB0087832B /* CharacterSelectionViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		358CB0E92AF8CE300087832B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				358CB0EA2AF8CE9F0087832B /* SegueIdentifier.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		359371A42AF4EE4000124E5D = {
@@ -191,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				358CAEC52AF7710E00C070FB /* Common */,
+				358CB0E52AF8C9700087832B /* CharacterSelection */,
 				358CAEBF2AF75D7E00C070FB /* NicknameInput */,
 				359371E02AF524D600124E5D /* SNSLogin */,
 				359371E92AF52FFB00124E5D /* Resources */,
@@ -218,18 +277,18 @@
 		359371E02AF524D600124E5D /* SNSLogin */ = {
 			isa = PBXGroup;
 			children = (
-				359371E22AF5259000124E5D /* view */,
+				359371E22AF5259000124E5D /* View */,
 			);
 			path = SNSLogin;
 			sourceTree = "<group>";
 		};
-		359371E22AF5259000124E5D /* view */ = {
+		359371E22AF5259000124E5D /* View */ = {
 			isa = PBXGroup;
 			children = (
 				352734022AF7952E00ABEB05 /* CustomView */,
 				359371B42AF4EE4000124E5D /* SNSLoginViewController.swift */,
 			);
-			path = view;
+			path = View;
 			sourceTree = "<group>";
 		};
 		359371E92AF52FFB00124E5D /* Resources */ = {
@@ -279,6 +338,8 @@
 			name = MILLIONZ_cloneCoding;
 			packageProductDependencies = (
 				358CAEBD2AF5572300C070FB /* SnapKit */,
+				3523A7122AF7CF010019FC7C /* RxCocoa */,
+				3523A7142AF7CF010019FC7C /* RxSwift */,
 			);
 			productName = MILLIONZ_cloneCoding;
 			productReference = 359371AD2AF4EE4000124E5D /* MILLIONZ_cloneCoding.app */;
@@ -354,6 +415,7 @@
 			mainGroup = 359371A42AF4EE4000124E5D;
 			packageReferences = (
 				358CAEBC2AF5572300C070FB /* XCRemoteSwiftPackageReference "SnapKit" */,
+				3523A7112AF7CF010019FC7C /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 359371AE2AF4EE4000124E5D /* Products */;
 			projectDirPath = "";
@@ -407,12 +469,17 @@
 				358CAECA2AF774B600C070FB /* ActionBottomButton.swift in Sources */,
 				359371B52AF4EE4000124E5D /* SNSLoginViewController.swift in Sources */,
 				352734062AF7A0BC00ABEB05 /* UIColor+CustomColors.swift in Sources */,
+				3523A7102AF7CEB80019FC7C /* NicknameInputViewModel.swift in Sources */,
 				359371B12AF4EE4000124E5D /* AppDelegate.swift in Sources */,
 				352733FE2AF7845900ABEB05 /* UIView+XibLoading.swift in Sources */,
+				358CB0E42AF8ACB00087832B /* SharedRegistrationViewModel.swift in Sources */,
 				3523A70D2AF7C3CA0019FC7C /* UITextField+ClearButton.swift in Sources */,
 				359371B32AF4EE4000124E5D /* SceneDelegate.swift in Sources */,
 				358CAEC22AF75DA000C070FB /* NicknameInputViewController.swift in Sources */,
+				358CB0EB2AF8CE9F0087832B /* SegueIdentifier.swift in Sources */,
 				352734042AF7954300ABEB05 /* TextInputBar.swift in Sources */,
+				358CB0E82AF8C9DB0087832B /* CharacterSelectionViewController.swift in Sources */,
+				358CB0E12AF88AC00087832B /* PreviousSNSTypeAlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,6 +830,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3523A7112AF7CF010019FC7C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
 		358CAEBC2AF5572300C070FB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -774,6 +849,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3523A7122AF7CF010019FC7C /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3523A7112AF7CF010019FC7C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		3523A7142AF7CF010019FC7C /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3523A7112AF7CF010019FC7C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
 		358CAEBD2AF5572300C070FB /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 358CAEBC2AF5572300C070FB /* XCRemoteSwiftPackageReference "SnapKit" */;

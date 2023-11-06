@@ -22,7 +22,7 @@ class ActionBottomButton: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        self.loadViewFromXib()
+        self.initializeViewFromXib()
     }
     
     override func awakeFromNib() {

@@ -8,11 +8,16 @@
 import UIKit
 
 extension UIView {
-    func loadViewFromXib() {
-        let identifier = String(describing: type(of: self))
-        guard let customView = Bundle.main.loadNibNamed(identifier, owner: self, options: nil)?.first as? UIView else { return }
+    func initializeViewFromXib() {
+        guard let customView = instantiateFromXib() else { return }
         customView.frame = self.bounds
-
         self.addSubview(customView)
+    }
+    
+    func instantiateFromXib() -> UIView? {
+        let identifier = String(describing: type(of: self))
+        guard let customView = Bundle.main.loadNibNamed(identifier, owner: self, options: nil)?.first as? UIView else { return nil }
+
+        return customView
     }
 }
