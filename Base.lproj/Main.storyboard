@@ -189,14 +189,67 @@
                     <view key="view" contentMode="scaleToFill" id="bha-Ds-t7T">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="밀리언즈에서 함께 공부할 캐릭터를 선택해주세요" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCt-mp-b2F">
+                                <rect key="frame" x="20" y="119" width="254" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="254" id="AQn-xa-q2I"/>
+                                    <constraint firstAttribute="height" constant="64" id="ISx-P0-j24"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Medium" family="Spoqa Han Sans Neo" pointSize="24"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKI-P6-YbO" customClass="BottomTailPICKBubbleView" customModule="MILLIONZ_cloneCoding" customModuleProvider="target">
+                                <rect key="frame" x="185" y="223" width="60" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Y7o-rs-5VN"/>
+                                    <constraint firstAttribute="width" constant="60" id="gM7-pt-VFY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dq8-qK-GDe" customClass="ActionBottomButton" customModule="MILLIONZ_cloneCoding" customModuleProvider="target">
+                                <rect key="frame" x="20" y="826" width="390" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="WsH-iJ-AWF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonTitle" value="선택 완료"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rub-vy-gDD">
+                                <rect key="frame" x="0.0" y="283" width="430" height="281"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="281" id="uRS-22-jLL"/>
+                                </constraints>
+                                <collectionViewLayout key="collectionViewLayout" id="Nfg-Db-RRf" customClass="CenteredFlowLayout" customModule="MILLIONZ_cloneCoding" customModuleProvider="target"/>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TE2-VH-AVj"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TE2-VH-AVj" firstAttribute="trailing" secondItem="rub-vy-gDD" secondAttribute="trailing" id="AW2-ln-EzB"/>
+                            <constraint firstItem="FKI-P6-YbO" firstAttribute="centerX" secondItem="bha-Ds-t7T" secondAttribute="centerX" id="BGw-sI-d2T"/>
+                            <constraint firstItem="dq8-qK-GDe" firstAttribute="leading" secondItem="TE2-VH-AVj" secondAttribute="leading" constant="20" id="Dzq-XH-e0W"/>
+                            <constraint firstItem="TE2-VH-AVj" firstAttribute="bottom" secondItem="dq8-qK-GDe" secondAttribute="bottom" constant="16" id="Ink-kU-Nly"/>
+                            <constraint firstItem="FKI-P6-YbO" firstAttribute="top" secondItem="OCt-mp-b2F" secondAttribute="bottom" constant="40" id="M7o-PQ-h3i"/>
+                            <constraint firstItem="dq8-qK-GDe" firstAttribute="centerX" secondItem="bha-Ds-t7T" secondAttribute="centerX" id="PE0-rt-dbo"/>
+                            <constraint firstItem="rub-vy-gDD" firstAttribute="leading" secondItem="TE2-VH-AVj" secondAttribute="leading" id="gnk-iW-eUf"/>
+                            <constraint firstItem="OCt-mp-b2F" firstAttribute="leading" secondItem="TE2-VH-AVj" secondAttribute="leading" constant="20" id="h99-e9-8Vq"/>
+                            <constraint firstItem="rub-vy-gDD" firstAttribute="top" secondItem="FKI-P6-YbO" secondAttribute="bottom" constant="12" id="iN9-NF-QUt"/>
+                            <constraint firstItem="OCt-mp-b2F" firstAttribute="top" secondItem="TE2-VH-AVj" secondAttribute="top" constant="16" id="x3c-8e-Wxg"/>
+                            <constraint firstItem="TE2-VH-AVj" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OCt-mp-b2F" secondAttribute="trailing" id="xFM-yT-ToJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sGC-gX-7aT"/>
+                    <connections>
+                        <outlet property="characterHorizontalCollectionView" destination="rub-vy-gDD" id="DBA-yN-PWS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JwZ-gd-qc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2316" y="-29"/>
+            <point key="canvasLocation" x="2314.8837209302324" y="-29.613733905579402"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ddv-Ng-lch">
