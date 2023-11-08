@@ -21,7 +21,7 @@ class PreviousSNSTypeAlertView: UIView {
         super.init(coder: coder)
     }
     
-    // MARK: - Interface Setup
+    // MARK: - Public Methods
     func setupConstraints(targetComponent: UIView) {
         self.snp.makeConstraints {
             $0.width.equalTo(104)

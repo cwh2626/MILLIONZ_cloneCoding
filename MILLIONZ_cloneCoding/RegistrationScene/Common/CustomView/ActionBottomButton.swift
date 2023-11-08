@@ -8,9 +8,7 @@
 import UIKit
 
 class ActionBottomButton: UIView {
-    
-    @IBOutlet weak var actionButton: ActionButton!
-    
+    // MARK: - Properties
     @IBInspectable var buttonTitle: String? {
         set {
             actionButton.setTitle(newValue, for: .normal)
@@ -20,6 +18,10 @@ class ActionBottomButton: UIView {
         }
     }
     
+    // MARK: - UI Components
+    @IBOutlet weak var actionButton: ActionButton!
+        
+    // MARK: - Initialization
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.initializeViewFromXib()
@@ -30,7 +32,7 @@ class ActionBottomButton: UIView {
         setupProperties()
     }
     
-    
+    // MARK: - Private Methods
     private func setupProperties() {
         actionButton.layer.cornerRadius = 16
     }

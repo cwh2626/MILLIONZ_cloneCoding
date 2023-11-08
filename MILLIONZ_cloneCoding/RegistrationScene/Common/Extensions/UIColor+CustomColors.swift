@@ -15,5 +15,4 @@ extension UIColor {
     static let nonoBackground = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 177.0/255.0, alpha: 1.0)
     static let gogoBackground = UIColor(red: 221.0/255.0, green: 204.0/255.0, blue: 255.0/255.0, alpha: 1.0)
     static let dodoBackground = UIColor(red: 192.0/255.0, green: 255.0/255.0, blue: 237.0/255.0, alpha: 1.0)
-
 }

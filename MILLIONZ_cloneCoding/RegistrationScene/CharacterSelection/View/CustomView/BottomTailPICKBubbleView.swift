@@ -8,7 +8,7 @@
 import UIKit
 
 class BottomTailPICKBubbleView: UIView {
-    
+    // MARK: - Initialization
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.initializeViewFromXib()

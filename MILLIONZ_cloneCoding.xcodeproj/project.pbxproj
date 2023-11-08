@@ -55,6 +55,7 @@
 		359371F02AF5305C00124E5D /* SpoqaHanSansNeo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 359371ED2AF5305C00124E5D /* SpoqaHanSansNeo-Regular.otf */; };
 		359371F12AF5305C00124E5D /* SpoqaHanSansNeo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 359371EE2AF5305C00124E5D /* SpoqaHanSansNeo-Medium.otf */; };
 		35DC44832AFB268600C6623D /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DC44822AFB268600C6623D /* UIViewController+Alert.swift */; };
+		35DC44852AFB4D5D00C6623D /* StoryBoardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DC44842AFB4D5D00C6623D /* StoryBoardIdentifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		359371ED2AF5305C00124E5D /* SpoqaHanSansNeo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Regular.otf"; sourceTree = "<group>"; };
 		359371EE2AF5305C00124E5D /* SpoqaHanSansNeo-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Medium.otf"; sourceTree = "<group>"; };
 		35DC44822AFB268600C6623D /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		35DC44842AFB4D5D00C6623D /* StoryBoardIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardIdentifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 				358CB1192AFA91BD0087832B /* ImageNames.swift */,
 				358CB11B2AFA925D0087832B /* FontNames.swift */,
 				358CB11D2AFAA4C70087832B /* ImageCacheManager.swift */,
+				35DC44842AFB4D5D00C6623D /* StoryBoardIdentifier.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35DC44852AFB4D5D00C6623D /* StoryBoardIdentifier.swift in Sources */,
 				358CAECA2AF774B600C070FB /* ActionBottomButton.swift in Sources */,
 				358CB10C2AFA39290087832B /* RegistrationCompleteViewController.swift in Sources */,
 				358CB1162AFA7F720087832B /* UserDefaultsKeys.swift in Sources */,

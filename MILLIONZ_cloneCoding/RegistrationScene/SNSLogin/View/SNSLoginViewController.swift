@@ -73,12 +73,12 @@ class SNSLoginViewController: UIViewController {
         }
     }
     
-    // MARK: - Utility Methods
+    // MARK: - Private Methods
     private func setupPreviousSNSTypeAlertView(targetButton: UIButton) {
         let nib = UINib(nibName: PreviousSNSTypeAlertView.id, bundle: nil)
         guard let alertView = nib.instantiate(withOwner: self, options: nil).first as? PreviousSNSTypeAlertView else {
             return
-        }        
+        }
         self.view.addSubview(alertView)
         alertView.setupConstraints(targetComponent: targetButton)
     }

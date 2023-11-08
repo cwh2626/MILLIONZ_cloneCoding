@@ -40,7 +40,7 @@ class TextInputBar: UIView {
         }
     }
     
-    // MARK: - Utility Methods
+    // MARK: - Private Methods
     private func setupProperties() {
         inputTextField.delegate = self
 

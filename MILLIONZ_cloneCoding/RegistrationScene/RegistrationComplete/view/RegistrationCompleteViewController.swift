@@ -8,34 +8,30 @@
 import UIKit
 
 class RegistrationCompleteViewController: UIViewController {
-    var registrationData: RegistrationResponse!
+    // MARK: - Properties
+    var registrationData: RegistrationResponse?
     
+    // MARK: - UI Components
     @IBOutlet weak var logoutButtonContainer: ActionBottomButton!
-    
     @IBOutlet weak var userProfileContanierView: UserProfileCard!
     
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         logoutButtonContainer.actionButton.addTarget(self, action: #selector(self.logoutButtonTapped), for: .touchUpInside)
-        
-        userProfileContanierView.prepare(data: registrationData)
-        
+        guard let viewData = registrationData else { return }
+        userProfileContanierView.prepare(data: viewData)
     }
     
-    private func bindViewModel() {
-        
-    }
+    // MARK: - Action Methods
     @objc func logoutButtonTapped(_ sender: UIButton) {
-        // 스토리보드에서 네비게이션 컨트롤러 인스턴스화
-        guard let navigationController = storyboard?.instantiateViewController(withIdentifier: "RegistrationNavigationController") as? UINavigationController,
-
+        guard let navigationController = storyboard?.instantiateViewController(withIdentifier: StoryBoardIdentifier.registrationNavigationId) as? UINavigationController,
               let window = view.window, let sceneDelegate = window.windowScene?.delegate as? SceneDelegate else {
             return
         }
         
         sceneDelegate.window?.rootViewController = navigationController
         sceneDelegate.window?.makeKeyAndVisible()
-        
     }
 
 }

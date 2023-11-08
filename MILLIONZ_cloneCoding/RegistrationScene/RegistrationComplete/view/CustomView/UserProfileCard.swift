@@ -8,13 +8,13 @@
 import UIKit
 
 class UserProfileCard: UIView {
-    
-    @IBOutlet var containerView: UIView!
-    
+    // MARK: - UI Components
+    @IBOutlet var containerView: UIView!    
     @IBOutlet weak var snsLabel: UILabel!
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var characterNameLabel: UILabel!
     
+    // MARK: - Initialization
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.initializeViewFromXib()
@@ -25,11 +25,12 @@ class UserProfileCard: UIView {
         setupProperties()
     }
     
+    // MARK: - Private Methods
     private func setupProperties() {
-        containerView.layer.cornerRadius = 8
-        
+        containerView.layer.cornerRadius = 8        
     }
     
+    // MARK: - Public Methods
     func prepare(data: RegistrationResponse) {
         self.snsLabel.text = data.snsType
         self.nicknameLabel.text = data.nickname

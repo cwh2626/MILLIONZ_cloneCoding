@@ -9,9 +9,11 @@ import RxSwift
 import Foundation
 
 class RegistrationService {
+    // MARK: - Properties
     private let apiUrl = Environment.apiUrl
     private let apiToken = Environment.apiToken
     
+    // MARK: - Public Methods
     func fetchCharacters() -> Observable<ApiResponse> {
         return Observable.create { observer in
             let url = URL(string: self.apiUrl + "/character")!
@@ -19,7 +21,6 @@ class RegistrationService {
 
             request.httpMethod = "GET"
             request.setValue("Bearer \(self.apiToken)", forHTTPHeaderField: "Authorization")
-
 
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 if let error = error {
@@ -34,7 +35,6 @@ class RegistrationService {
 
                 do {
                     let responseData = try JSONDecoder().decode(ApiResponse.self, from: data)
-
                     observer.onNext(responseData)
                 } catch {
                     observer.onError(error)
@@ -50,9 +50,9 @@ class RegistrationService {
     
     func register(with requestData: RegistrationRequest) -> Observable<ApiResponse> {
         return Observable.create { observer in
-        
             let url = URL(string: self.apiUrl + "/regist")!
             var request = URLRequest(url: url)
+            
             request.httpMethod = "POST"
             request.setValue("Bearer \(self.apiToken)", forHTTPHeaderField: "Authorization")
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -65,7 +65,6 @@ class RegistrationService {
                 return Disposables.create()
             }
             
-            // URLSession을 사용하여 요청을 수행합니다.
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 if let error = error {
                     observer.onError(error)
@@ -79,7 +78,6 @@ class RegistrationService {
 
                 do {
                     let responseData = try JSONDecoder().decode(ApiResponse.self, from: data)
-
                     observer.onNext(responseData)
                 } catch {
                     observer.onError(error)
@@ -92,7 +90,4 @@ class RegistrationService {
             }
         }
     }
-
-    
-    
 }

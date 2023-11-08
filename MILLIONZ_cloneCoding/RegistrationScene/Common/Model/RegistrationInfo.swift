@@ -5,19 +5,6 @@
 //  Created by 조웅희 on 2023/11/08.
 //
 
-struct RegistrationRequest: Encodable {
-    var snsType: String
-    var nickname: String
-    var character: Int64
-}
-
-struct RegistrationResponse: Decodable {
-    var snsType: String
-    var nickname: String
-    var character: Int64
-    var characterName: String
-}
-
 struct ApiResponse: Decodable {
     let result: Bool
     let message: String
@@ -46,11 +33,21 @@ struct ApiResponse: Decodable {
     }
 }
 
+struct RegistrationRequest: Encodable {
+    var snsType: String
+    var nickname: String
+    var character: Int64
+}
+
+struct RegistrationResponse: Decodable {
+    var snsType: String
+    var nickname: String
+    var character: Int64
+    var characterName: String
+}
+
 struct ErrorDetail: Codable {
     let code: String
     let viewType: String
     let message: String
 }
-
-
-

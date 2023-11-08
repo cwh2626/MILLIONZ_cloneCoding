@@ -14,11 +14,11 @@ class SharedRegistrationViewModel {
     // MARK: - Properties
     private let registerButtonTapped = PublishSubject<Void>()
     private let registrationResult = PublishSubject<RegistrationResponse>()
-
-    private let selectedSNSType = BehaviorSubject<SnsType?>(value: nil)
-    private let nicknameValue = BehaviorRelay<String>(value: "")
+    
     private let characters = BehaviorSubject<[Character]>(value: [])
-    private let selectedCharacter = PublishSubject<Int64>()
+    private let selectedSNSType = BehaviorRelay<SnsType?>(value: nil)
+    private let nicknameValue = BehaviorRelay<String>(value: "")
+    private let selectedCharacter = PublishRelay<Int64>()
     private let registrationError = PublishRelay<ErrorDetail>()
     
     private let registrationService: RegistrationService
@@ -58,17 +58,22 @@ class SharedRegistrationViewModel {
     
     // MARK: - Binding
     private func setupBindings() {
-        
         registerButtonTapped
-            .withLatestFrom(Observable.combineLatest(selectedSNSType, nicknameValue, selectedCharacter, resultSelector: { snsType, nickname, character in
+            .withLatestFrom(Observable.combineLatest(selectedSNSType,
+                                                     nicknameValue,
+                                                     selectedCharacter,
+                                                     resultSelector: { snsType, nickname, character in
                 return (snsType, nickname, character)
             }))
             .compactMap { snsType, nickname, character -> RegistrationRequest? in
                 guard let snsType = snsType else { return nil }
-                return RegistrationRequest(snsType: snsType.stringValue, nickname: nickname, character: character)
+                return RegistrationRequest(snsType: snsType.stringValue,
+                                           nickname: nickname,
+                                           character: character)
             }
-            .flatMapLatest { [unowned self] request -> Observable<ApiResponse> in
-                return registrationService.register(with: request)
+            .flatMapLatest { [weak self] request -> Observable<ApiResponse> in
+                guard let self = self else { return Observable.empty() }
+                return self.registrationService.register(with: request)
             }
             .subscribe(onNext: { [weak self] response in
                 if response.result {
@@ -77,17 +82,16 @@ class SharedRegistrationViewModel {
                     
                     // SNS로그인화면 말풍선 유무 설정용
                     if let snsTypeValue = SnsType(krValue: data.snsType) {
-                        UserDefaults.standard.set(snsTypeValue.rawValue, forKey: UserDefaultsKeys.registeredSNSType)
+                        UserDefaults.standard.set(snsTypeValue.rawValue,
+                                                  forKey: UserDefaultsKeys.registeredSNSType)
                     }
                 } else {
                     guard let data = response.error else { return }
                     self?.registrationError.accept(data)
                 }
-                
-                
-                
+
             }, onError: { error in
-                print("Registration error: \(error)")
+                fatalError("Registration error: \(error)")
             })
             .disposed(by: disposeBag)
     }
@@ -98,11 +102,11 @@ class SharedRegistrationViewModel {
     }
 
     func selectSnsType(_ type: SnsType) {
-        selectedSNSType.onNext(type)
+        selectedSNSType.accept(type)
     }
     
     func selectedCharacter(_ characterSeq: Int64) {
-        selectedCharacter.onNext(characterSeq)
+        selectedCharacter.accept(characterSeq)
     }
     
     func performRegistration() {
@@ -138,13 +142,11 @@ class SharedRegistrationViewModel {
                         
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
-                print("이미지 다운로드 에러: \(error.localizedDescription)")
-                return
+                fatalError("이미지 다운로드 에러: \(error.localizedDescription)")
             }
             
             guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-                print("서버로부터 유효하지 않은 응답을 받았습니다.")
-                return
+                fatalError("서버로부터 유효하지 않은 응답을 받았습니다.")
             }
             
             if let data = data, let downloadedImage = UIImage(data: data) {

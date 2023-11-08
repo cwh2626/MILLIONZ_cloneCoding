@@ -8,6 +8,7 @@
 import UIKit
 
 class CenteredFlowLayout: UICollectionViewFlowLayout {
+    // MARK: - Initialization
     override init() {
         super.init()
         setupLayout()
@@ -18,22 +19,18 @@ class CenteredFlowLayout: UICollectionViewFlowLayout {
         setupLayout()
     }
     
-    func setupLayout() {
+    // MARK: - Private Methods
+    private func setupLayout() {
         scrollDirection = .horizontal
         minimumLineSpacing = 12
         minimumInteritemSpacing = 0
     }
     
+    // MARK: - Overridden Methods
     override func prepare() {
         super.prepare()
-        
         guard let collectionView = collectionView else { fatalError() }
-        
-        // itemSize
-//        let itemHeight = collectionView.bounds.height - sectionInset.top - sectionInset.bottom
-        itemSize = CGSize(width: 184, height: 281)
-        
-        // horizontal insets
+
         let horizontalInsets = (collectionView.bounds.width - itemSize.width) / 2
         sectionInset.left = horizontalInsets
         sectionInset.right = horizontalInsets

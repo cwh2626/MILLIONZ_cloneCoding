@@ -232,6 +232,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="sGC-gX-7aT"/>
                     <connections>
+                        <outlet property="centeredFlowLayout" destination="Nfg-Db-RRf" id="kiM-0K-MBK"/>
                         <outlet property="characterHorizontalCollectionView" destination="rub-vy-gDD" id="DBA-yN-PWS"/>
                         <outlet property="completeSelectionButtonContainer" destination="dq8-qK-GDe" id="ZK4-V9-sIM"/>
                         <segue destination="MWP-Pm-Noz" kind="presentation" identifier="showMemberInfoSegue" modalPresentationStyle="fullScreen" id="fdf-80-cAz"/>

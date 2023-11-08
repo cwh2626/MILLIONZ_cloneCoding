@@ -10,7 +10,6 @@ import UIKit
 extension UIImageView {
   
     func loadImage(withURL urlString: String) {
-        
         // 캐시된 이미지가 있다면 설정하고 반환
         if let cachedImage = ImageCacheManager.shared.image(forKey: urlString) {
             self.image = cachedImage
@@ -22,14 +21,11 @@ extension UIImageView {
             URLSession.shared.dataTask(with: url) { data, response, error in
                 if let data = data, let downloadedImage = UIImage(data: data) {
                     if let error = error {
-                        print("이미지 다운로드 에러: \(error.localizedDescription)")
-                        return
+                        fatalError("이미지 다운로드 에러: \(error.localizedDescription)")
                     }
                     
-                    // HTTP 응답 상태 코드를 확인합니다.
                     guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-                        print("서버로부터 유효하지 않은 응답을 받았습니다.")
-                        return
+                        fatalError("서버로부터 유효하지 않은 응답을 받았습니다.")
                     }
                     
                     DispatchQueue.main.async {
