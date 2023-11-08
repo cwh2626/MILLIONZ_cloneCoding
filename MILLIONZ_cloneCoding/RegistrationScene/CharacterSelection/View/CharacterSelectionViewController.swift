@@ -23,19 +23,9 @@ class CharacterSelectionViewController: UIViewController {
         registerCell()
 
         characterHorizontalCollectionView.decelerationRate = .fast
-//        completeSelectionButtonContainer.actionButton.addTarget(self, action: #selector(self.completeSelectionButtonTapped), for: .touchUpInside)
         bindViewModel()
     }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-//        print(#function)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print(#function)
@@ -67,7 +57,7 @@ class CharacterSelectionViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        viewModel.characters
+        viewModel.charactersObservable
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] characters in
                 guard let self = self else { return }
@@ -76,10 +66,6 @@ class CharacterSelectionViewController: UIViewController {
                 if self.charactersData.count > 0 {
                     self.characterHorizontalCollectionView.reloadData()
                 }
-                
-                // 이거 두번 호출되서 계속 모양이 이상해지는듯 그리고 시쿼스값에 맞추어서 배열값 집어넣자
-                print("bind 호출",self.charactersData.count)
-                
             })
             .disposed(by: disposeBag)
         
@@ -95,19 +81,26 @@ class CharacterSelectionViewController: UIViewController {
                 
                 let selectedCharacter = charactersData[centerIndexPath.row].characterSeq
 
-                self.viewModel.selectedCharacter.onNext(selectedCharacter)
+                self.viewModel.selectedCharacter(selectedCharacter)
                 
-                self.viewModel.registerButtonTapped.onNext(())
+                self.viewModel.performRegistration()
                 
             })
             .disposed(by: disposeBag)
 
-        viewModel.registrationResult
+        viewModel.registrationResultObservable
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] registrationData in
                 self?.performSegue(withIdentifier: SegueIdentifier.showMemberInfo, sender: registrationData)
             }, onError: { error in
-                // 에러 처리. 예를 들어, 사용자에게 에러 메시지를 보여주는 Alert을 띄울 수 있습니다.
+
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.registrationErrorObservable
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] error in
+                self?.showAlert(message: error.message)
             })
             .disposed(by: disposeBag)
     }

@@ -12,7 +12,7 @@ class RegistrationService {
     private let apiUrl = Environment.apiUrl
     private let apiToken = Environment.apiToken
     
-    func fetchCharacters() -> Observable<[Character]> {
+    func fetchCharacters() -> Observable<ApiResponse> {
         return Observable.create { observer in
             let url = URL(string: self.apiUrl + "/character")!
             var request = URLRequest(url: url)
@@ -33,10 +33,9 @@ class RegistrationService {
                 }
 
                 do {
-                    let responseData = try JSONDecoder().decode(ApiResponse<[Character]>.self, from: data)
-                    let characters = responseData.data
+                    let responseData = try JSONDecoder().decode(ApiResponse.self, from: data)
 
-                    observer.onNext(characters)
+                    observer.onNext(responseData)
                 } catch {
                     observer.onError(error)
                 }
@@ -49,7 +48,7 @@ class RegistrationService {
         }
     }
     
-    func register(with requestData: RegistrationRequest) -> Observable<ApiResponse<RegistrationResponse>> {
+    func register(with requestData: RegistrationRequest) -> Observable<ApiResponse> {
         return Observable.create { observer in
         
             let url = URL(string: self.apiUrl + "/regist")!
@@ -79,15 +78,8 @@ class RegistrationService {
                 }
 
                 do {
-                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                        print(json)
-                    }
+                    let responseData = try JSONDecoder().decode(ApiResponse.self, from: data)
 
-                    let responseData = try JSONDecoder().decode(ApiResponse<RegistrationResponse>.self, from: data)
-//                    let registrationData = responseData.data
-                    
-
-//                    observer.onNext(registrationData)
                     observer.onNext(responseData)
                 } catch {
                     observer.onError(error)

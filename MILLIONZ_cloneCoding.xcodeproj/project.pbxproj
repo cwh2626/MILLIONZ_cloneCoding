@@ -54,6 +54,7 @@
 		359371EF2AF5305C00124E5D /* SpoqaHanSansNeo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 359371EC2AF5305C00124E5D /* SpoqaHanSansNeo-Bold.otf */; };
 		359371F02AF5305C00124E5D /* SpoqaHanSansNeo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 359371ED2AF5305C00124E5D /* SpoqaHanSansNeo-Regular.otf */; };
 		359371F12AF5305C00124E5D /* SpoqaHanSansNeo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 359371EE2AF5305C00124E5D /* SpoqaHanSansNeo-Medium.otf */; };
+		35DC44832AFB268600C6623D /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DC44822AFB268600C6623D /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		359371EC2AF5305C00124E5D /* SpoqaHanSansNeo-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Bold.otf"; sourceTree = "<group>"; };
 		359371ED2AF5305C00124E5D /* SpoqaHanSansNeo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Regular.otf"; sourceTree = "<group>"; };
 		359371EE2AF5305C00124E5D /* SpoqaHanSansNeo-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Medium.otf"; sourceTree = "<group>"; };
+		35DC44822AFB268600C6623D /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				352734052AF7A0BC00ABEB05 /* UIColor+CustomColors.swift */,
 				3523A70C2AF7C3CA0019FC7C /* UITextField+ClearButton.swift */,
 				358CB0FF2AF921C00087832B /* UIImageView+AsyncLoad.swift */,
+				35DC44822AFB268600C6623D /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				358CB1082AFA26250087832B /* Environment.swift in Sources */,
 				358CB0E42AF8ACB00087832B /* SharedRegistrationViewModel.swift in Sources */,
 				3523A70D2AF7C3CA0019FC7C /* UITextField+ClearButton.swift in Sources */,
+				35DC44832AFB268600C6623D /* UIViewController+Alert.swift in Sources */,
 				359371B32AF4EE4000124E5D /* SceneDelegate.swift in Sources */,
 				358CB1182AFA8AB20087832B /* ActionButton.swift in Sources */,
 				358CAEC22AF75DA000C070FB /* NicknameInputViewController.swift in Sources */,
