@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 struct Character: Codable {
     let characterSeq: Int64
     let engName: String

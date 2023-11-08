@@ -196,7 +196,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dq8-qK-GDe" customClass="ActionBottomButton" customModule="MILLIONZ_cloneCoding" customModuleProvider="target">
-                                <rect key="frame" x="20" y="836" width="390" height="56"/>
+                                <rect key="frame" x="20" y="826" width="390" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="WsH-iJ-AWF"/>
                                 </constraints>
@@ -220,7 +220,7 @@
                             <constraint firstItem="TE2-VH-AVj" firstAttribute="trailing" secondItem="rub-vy-gDD" secondAttribute="trailing" id="AW2-ln-EzB"/>
                             <constraint firstItem="FKI-P6-YbO" firstAttribute="centerX" secondItem="bha-Ds-t7T" secondAttribute="centerX" id="BGw-sI-d2T"/>
                             <constraint firstItem="dq8-qK-GDe" firstAttribute="leading" secondItem="TE2-VH-AVj" secondAttribute="leading" constant="20" id="Dzq-XH-e0W"/>
-                            <constraint firstItem="TE2-VH-AVj" firstAttribute="bottom" secondItem="dq8-qK-GDe" secondAttribute="bottom" constant="6" id="Ink-kU-Nly"/>
+                            <constraint firstItem="TE2-VH-AVj" firstAttribute="bottom" secondItem="dq8-qK-GDe" secondAttribute="bottom" constant="16" id="Ink-kU-Nly"/>
                             <constraint firstItem="FKI-P6-YbO" firstAttribute="top" secondItem="OCt-mp-b2F" secondAttribute="bottom" constant="40" id="M7o-PQ-h3i"/>
                             <constraint firstItem="dq8-qK-GDe" firstAttribute="centerX" secondItem="bha-Ds-t7T" secondAttribute="centerX" id="PE0-rt-dbo"/>
                             <constraint firstItem="rub-vy-gDD" firstAttribute="leading" secondItem="TE2-VH-AVj" secondAttribute="leading" id="gnk-iW-eUf"/>
@@ -251,7 +251,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTH-a4-8Xe" customClass="ActionBottomButton" customModule="MILLIONZ_cloneCoding" customModuleProvider="target">
-                                <rect key="frame" x="20" y="836" width="390" height="56"/>
+                                <rect key="frame" x="20" y="826" width="390" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Px0-00-IGw"/>
                                 </constraints>
@@ -280,7 +280,7 @@
                             <constraint firstItem="XGx-r5-DCw" firstAttribute="centerX" secondItem="TFW-9x-tc3" secondAttribute="centerX" id="6Vw-2G-Mn8"/>
                             <constraint firstItem="GTH-a4-8Xe" firstAttribute="leading" secondItem="TFW-9x-tc3" secondAttribute="leading" constant="20" id="C6j-1D-OHZ"/>
                             <constraint firstItem="m6C-ka-lGT" firstAttribute="centerX" secondItem="TFW-9x-tc3" secondAttribute="centerX" id="CNt-iK-hqz"/>
-                            <constraint firstAttribute="bottom" secondItem="GTH-a4-8Xe" secondAttribute="bottom" constant="40" id="Xqz-Y0-yJf"/>
+                            <constraint firstAttribute="bottom" secondItem="GTH-a4-8Xe" secondAttribute="bottom" constant="50" id="Xqz-Y0-yJf"/>
                             <constraint firstItem="XGx-r5-DCw" firstAttribute="top" secondItem="VHD-Wn-vlO" secondAttribute="top" constant="157" id="Yl4-CP-Zjg"/>
                             <constraint firstItem="m6C-ka-lGT" firstAttribute="top" secondItem="XGx-r5-DCw" secondAttribute="bottom" constant="24" id="aH5-aZ-nXE"/>
                             <constraint firstItem="m6C-ka-lGT" firstAttribute="leading" secondItem="VHD-Wn-vlO" secondAttribute="leading" constant="20" id="cgD-R2-oXk"/>

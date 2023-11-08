@@ -35,5 +35,6 @@ class ActionBottomButton: UIView {
     // MARK: - Private Methods
     private func setupProperties() {
         actionButton.layer.cornerRadius = 16
+        actionButton.backgroundColor = .primary900
     }
 }
